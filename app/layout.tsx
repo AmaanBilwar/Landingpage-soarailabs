@@ -1,26 +1,23 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { Suspense } from "react";
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-})
+});
 
 export const metadata: Metadata = {
-  title: "DevPlatform - The Complete Platform to Build the Web",
-  description:
-    "Your team's toolkit to stop configuring and start innovating. Securely build, deploy, and scale the best web experiences.",
-  generator: "v0.app",
-}
+  title: "Kite - Beyond the Conflicts",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -29,5 +26,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
