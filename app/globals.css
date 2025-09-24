@@ -102,3 +102,13 @@
 .clean-border {
   border: 2px solid rgba(0, 0, 0, 0.1);
 }
+
+/* Radial fade utilities for hero image */
+.mask-radial-bottom {
+  -webkit-mask-image: radial-gradient(120% 85% at 50% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 1) 70%);
+  mask-image: radial-gradient(120% 85% at 50% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 1) 70%);
+}
+
+.radial-bottom-overlay {
+  background: radial-gradient(120% 85% at 50% 100%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.7) 85%);
+}
