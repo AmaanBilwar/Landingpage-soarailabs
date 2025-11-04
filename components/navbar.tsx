@@ -76,7 +76,7 @@ export function Navbar() {
           </Button>
           <Button
             size="sm"
-            className="rounded-none hard-shadow hard-shadow-hover"
+            className="rounded-md hard-shadow hard-shadow-hover"
           >
             Get Started
             <ArrowRight className="w-4 h-4 ml-2" />
