@@ -12,8 +12,8 @@ import Link from "next/link";
 
 export function Navbar() {
   return (
-    <nav className="relative z-10 p-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <nav className="sticky top-0 z-50 p-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between backdrop-blur-lg bg-white/10 border border-white/20 rounded-full shadow-lg px-6 py-3">
         <div className="flex items-center gap-2">
           <span className="font-semibold text-lg text-foreground">
             <Link
@@ -28,40 +28,40 @@ export function Navbar() {
         <NavigationMenu className="hidden md:flex" viewport={false}>
           <NavigationMenuList className="gap-8">
             <NavigationMenuItem>
-              <NavigationMenuLink asChild>
+              <NavigationMenuLink asChild className="!rounded-full">
                 <Link
                   href="/products"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-all px-4 py-2 rounded-full hover:bg-white/60"
                 >
                   Products
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink asChild>
+              <NavigationMenuLink asChild className="!rounded-full">
                 <Link
                   href="/pricing"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-all px-4 py-2 rounded-full hover:bg-white/60"
                 >
                   Pricing
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink asChild>
+              <NavigationMenuLink asChild className="!rounded-full">
                 <Link
                   href="/docs"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-all px-4 py-2 rounded-full hover:bg-white/60"
                 >
                   Docs
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink asChild>
+              <NavigationMenuLink asChild className="!rounded-full">
                 <Link
                   href="/blog"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-all px-4 py-2 rounded-full hover:bg-white/60"
                 >
                   Blog
                 </Link>
@@ -76,7 +76,7 @@ export function Navbar() {
           </Button>
           <Button
             size="sm"
-            className="rounded-none hard-shadow hard-shadow-hover"
+            className="rounded-md hard-shadow hard-shadow-hover"
           >
             Get Started
             <ArrowRight className="w-4 h-4 ml-2" />

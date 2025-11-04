@@ -39,6 +39,16 @@ now my next question was "how do i make my MCP a package?" and because we're usi
     `.trim(),
     publishedAt: "11/3/2025",
     author: "Amaan",
+  }, {
+    title: "How to make your MCP a package",
+    slug: createSlug("how-to-make-your-mcp-a-package"),
+    excerpt: "Learn how to make your MCP a package",
+    content: `
+    ## testing blog post 
+    This is a guide on how to make your MCP a package.
+    `,
+    publishedAt: "11/3/2025",
+    author: "Amaan",
   }
 ];
 

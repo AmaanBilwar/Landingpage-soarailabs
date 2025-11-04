@@ -6,6 +6,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Check } from "lucide-react";
 
 const products = [
   {
@@ -14,10 +16,26 @@ const products = [
       {
         title: "Breeze",
         description: "Lightweight and fast AI model for everyday tasks",
+        features: [
+          "Fast response times",
+          "Optimized for efficiency",
+          "Ideal for quick tasks",
+          "Low resource consumption",
+        ],
+        useCase: "Perfect for everyday automation and simple AI tasks",
+        status: "Available",
       },
       {
         title: "Gust",
         description: "Powerful AI model for complex workloads",
+        features: [
+          "Advanced reasoning capabilities",
+          "Handles complex workflows",
+          "Enterprise-grade performance",
+          "Scalable architecture",
+        ],
+        useCase: "Designed for demanding applications and enterprise use",
+        status: "Coming Soon",
       },
     ],
   },
@@ -27,6 +45,14 @@ const products = [
       {
         title: "Glide",
         description: "Seamless integration and collaboration",
+        features: [
+          "Easy API integration",
+          "Multi-platform support",
+          "Real-time collaboration",
+          "Secure data handling",
+        ],
+        useCase: "Streamline your workflow with seamless tool integration",
+        status: "Coming this week!",
       },
     ],
   },
@@ -36,6 +62,15 @@ const products = [
       {
         title: "Kite",
         description: "The first ever autocomplete for your version control",
+        features: [
+          "AI-powered autocomplete",
+          "Version control integration",
+          "Context-aware suggestions",
+          "Reduces merge conflicts",
+        ],
+        useCase:
+          "Revolutionize your development workflow with intelligent version control",
+        status: "Alpha",
       },
     ],
   },
@@ -43,10 +78,10 @@ const products = [
 
 const ProductsPage = () => {
   return (
-    <div className="min-h-screen w-full bg-[#f8fafc] relative">
+    <div className="min-h-screen w-full bg-[#f8fafc] relative -mt-20 pt-20">
       {/* Top Fade Grid Background */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute -top-20 left-0 right-0 h-full z-0"
         style={{
           backgroundImage: `
             linear-gradient(to right, #e2e8f0 1px, transparent 1px),
@@ -62,7 +97,7 @@ const ProductsPage = () => {
 
       {/* Bottom Fade Grid Background */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute -top-20 left-0 right-0 bottom-0 z-0"
         style={{
           backgroundImage: `
             linear-gradient(to right, #e2e8f0 1px, transparent 1px),
@@ -70,9 +105,9 @@ const ProductsPage = () => {
           `,
           backgroundSize: "20px 30px",
           WebkitMaskImage:
-            "radial-gradient(ellipse 80% 35% at 50% 100%, #000 30%, transparent 70%)",
+            "linear-gradient(to bottom, #000 0%, #000 90%, rgba(0,0,0,0.7) 95%, rgba(0,0,0,0.3) 98%, transparent 100%)",
           maskImage:
-            "radial-gradient(ellipse 80% 35% at 50% 100%, #000 30%, transparent 70%)",
+            "linear-gradient(to bottom, #000 0%, #000 90%, rgba(0,0,0,0.7) 95%, rgba(0,0,0,0.3) 98%, transparent 100%)",
         }}
       />
 
@@ -101,22 +136,67 @@ const ProductsPage = () => {
                   </h2>
                 </div>
 
-                {/* Product Cards Grid */}
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
+                {/* Product Cards Grid - Centered */}
+                <div className="flex flex-wrap justify-center items-start gap-6">
                   {category.items.map((item, itemIndex) => (
                     <Card
                       key={itemIndex}
-                      className="w-full max-w-sm rounded-none border-border/60 hover:border-foreground/20 transition-all duration-300 hover:-translate-y-0.5"
+                      className="w-full max-w-sm rounded-md border-border/60 hover:border-foreground/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     >
                       <CardHeader>
-                        <CardTitle className="text-2xl font-bold text-foreground">
-                          {item.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
+                        <div className="flex items-start justify-between mb-2">
+                          <CardTitle className="text-2xl font-bold text-foreground">
+                            {item.title}
+                          </CardTitle>
+                          <Badge
+                            variant={
+                              item.status === "Available"
+                                ? "default"
+                                : item.status === "Beta"
+                                  ? "secondary"
+                                  : "outline"
+                            }
+                            className="ml-2"
+                          >
+                            {item.status}
+                          </Badge>
+                        </div>
                         <CardDescription className="text-base text-muted-foreground leading-relaxed">
                           {item.description}
                         </CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        <div>
+                          <h4 className="text-sm font-semibold text-foreground mb-2">
+                            Use Case
+                          </h4>
+                          <p className="text-sm text-muted-foreground">
+                            {item.useCase}
+                          </p>
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-semibold text-foreground mb-3">
+                            Key Features
+                          </h4>
+                          <ul className="space-y-2">
+                            {item.features.map((feature, featureIndex) => (
+                              <li
+                                key={featureIndex}
+                                className="flex items-start gap-2"
+                              >
+                                <Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                                <span className="text-sm text-muted-foreground">
+                                  {feature}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="pt-2">
+                          <Button className="w-full" variant="outline">
+                            Learn More
+                          </Button>
+                        </div>
                       </CardContent>
                     </Card>
                   ))}
@@ -138,7 +218,7 @@ const ProductsPage = () => {
             spreadsheets.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="min-w-[140px]">
+            <Button size="lg" className="min-w-[140px] hard-shadow">
               Try it now
             </Button>
             <Button size="lg" variant="outline" className="min-w-[140px]">
