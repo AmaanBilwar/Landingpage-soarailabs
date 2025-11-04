@@ -53,33 +53,52 @@ export default function BlogPage() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="block group"
+              className="block group no-underline outline-none"
             >
-              <div className="flex items-center gap-6 bg-foreground/90 dark:bg-foreground/80 hover:bg-foreground transition-all duration-300 rounded-none p-4 border border-border/30">
-                {/* Image Thumbnail */}
-                <div className="relative w-48 h-32 flex-shrink-0 bg-muted rounded-none overflow-hidden">
-                  <Image
-                    src="/placeholder.jpg"
-                    alt={post.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+              <div
+                className="relative flex items-center gap-6 group-hover:opacity-95 transition-all duration-300 rounded-md p-4 overflow-hidden"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, #ffffff 0%, #ffffff 3%, #ffffff 60%, rgba(138, 191, 255, 0.1) 75%, rgba(138, 191, 255, 0.3) 85%, rgba(138, 191, 255, 0.7) 95%, rgba(138, 191, 255, 0.9) 100%)",
+                  borderTop: "1px solid rgba(0, 0, 0, 0.1)",
+                  borderRight: "1px solid rgba(0, 0, 0, 0.1)",
+                  borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+                  borderLeft: "1px solid rgba(0, 0, 0, 0.1)",
+                  boxShadow: "none",
+                  outline: "none",
+                  backgroundClip: "padding-box",
+                }}
+              >
+                {/* Content */}
+                <div className="relative z-10 flex items-center gap-6 w-full">
+                  {/* Image Thumbnail */}
+                  <div className="relative w-48 h-32 flex-shrink-0 bg-muted rounded-md overflow-hidden">
+                    <Image
+                      src="/placeholder.jpg"
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
 
-                {/* Text Content */}
-                <div className="flex-1 min-w-0">
-                  <h2 className="text-xl md:text-2xl font-bold text-background dark:text-background mb-2 group-hover:text-accent transition-colors">
-                    {post.title}
-                  </h2>
-                  <div className="flex items-center gap-2 text-sm text-background/70 dark:text-background/80">
-                    <Calendar className="w-4 h-4" />
-                    <time dateTime={post.publishedAt}>
-                      {new Date(post.publishedAt).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </time>
+                  {/* Text Content */}
+                  <div className="flex-1 min-w-0">
+                    <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                      {post.title}
+                    </h2>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Calendar className="w-4 h-4" />
+                      <time dateTime={post.publishedAt}>
+                        {new Date(post.publishedAt).toLocaleDateString(
+                          "en-US",
+                          {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          }
+                        )}
+                      </time>
+                    </div>
                   </div>
                 </div>
               </div>
