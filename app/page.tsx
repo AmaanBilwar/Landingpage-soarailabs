@@ -75,14 +75,9 @@ export default function HomePage() {
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
             <div className="flex flex-row justify-center items-center gap-2">
-              <Badge
-                variant="outline"
-                className="rounded-md px-4 py-1 hard-shadow"
-              >
-                Alpha
-              </Badge>
-              <span className="text-sm">
-                merge conflict resolution now available!
+              Merge Conflict Resolution in{" "}
+              <span className="underline underline-offset-2 text-white">
+                <Badge variant="secondary">Alpha</Badge>
               </span>
             </div>
           </div>
@@ -113,28 +108,44 @@ export default function HomePage() {
             {/* Left Column - Text Content */}
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Best privacy by default, not as a hidden option
+                But what is Glide?
               </h2>
               <p className="text-lg text-muted-foreground">
-                Helium blocks ads, trackers, phishing websites, and other
-                nonsense by default, thanks to community filters and uBlock
-                Origin. Helium blocks all third-party requests that aren't
-                essential for the page to function.
+                Glide is an MCP that focuses on speed & reliability more than
+                anything. Our aim was to fix the age old problems with Git and
+                this MCP does it and it does it{" "}
+                <span className="italic">fast</span>. Currently, it focuses on
+                two major but overlooked problems:
+                <ul className="list-disc list-inside ml-4">
+                  <li>Merge conflicts</li>
+                  <li>Large and unorganized commit history</li>
+                </ul>
+                <br /> We use semantically understand your codebase to generate
+                a clean and organized commit history and use fine-tuned models
+                to resolve merge conflicts.
+                <br />
+                <br />
+                Read more about how Glide MCP works in our{" "}
+                <span className="underline underline-offset-2 hover:cursor-pointer">
+                  <Link href="/blog/introducing-glide">blog</Link>.{" "}
+                </span>
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="rounded-md hard-shadow hard-shadow-hover"
+                  className="rounded-md hard-shadow hover:cursor-pointer hard-shadow-hover"
                 >
-                  Learn More
+                  <Link href="/docs/getting-started">Learn More</Link>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="rounded-md clean-border bg-transparent"
+                  className="rounded-md clean-border bg-transparent hover:cursor-pointer"
                 >
-                  View Features
+                  <Link href="/blog/introducing-glide/features">
+                    View Features
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -177,26 +188,14 @@ export default function HomePage() {
               </h2>
               <p className="text-lg text-muted-foreground">
                 Glide MCP is lightning-fast, lightweight, and designed for
-                effortless use. Get started in seconds with zero configuration
-                required—it's truly plug-and-play. Just install and you're ready
-                to go.
+                effortless use. We limit the number of tools exposed in Glide
+                intentionally. You will notice the speed &amp; performance we
+                offer after only a day of use.
+                <br />
+                <br />
+                We also plan on using top-of-the-line inference providers to
+                make sure you get the best possible results.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="rounded-md hard-shadow hard-shadow-hover"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="rounded-md clean-border bg-transparent"
-                >
-                  View Features
-                </Button>
-              </div>
             </div>
           </div>
         </div>
@@ -207,23 +206,72 @@ export default function HomePage() {
             {/* Left Column */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Simple Branching, Seamless Collaboration
+                Free & Open Source
               </h2>
               <p className="text-lg text-muted-foreground">
-                Never worry about losing your place. Effortlessly branch, merge,
-                and review code together &mdash; right in your workflow.
+                All parts of Glide MCP are open source, including online
+                services. You can self-host Glide MCP and use your own instance
+                in your IDE or coding agent like Claude Code or Warp.
+                <br />
+                <br />
+                If you don't want to self-host, you can use our fast &amp; cheap
+                inference. We plan on offering a free tier for personal use and
+                a paid tier for professionals and teams.
+                <br />
+                <br />
+                Go check out our{" "}
+                <span className="underline underline-offset-2 hover:cursor-pointer">
+                  <Link
+                    href="https://github.com/SoarAILabs/glide"
+                    target="_blank"
+                  >
+                    Github
+                  </Link>
+                </span>{" "}
+                and feel free to contribute or annoy us about feature requests.
+                <br />
+                <br />
+                We want to build this for developers, with developers.
               </p>
             </div>
             {/* Right Column */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Conflict-Free by Design
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Our tech ensures invisible version control with automated
-                conflict resolution, so you spend less time fighting with git
-                and more time shipping.
-              </p>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Zero Data Retention Policy by Design
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Our Glide MCP focuses on speed &amp; reliability. On top of
+                  that we don't store any data on our servers. You bring your
+                  own API keys as well. This means you are in full control of
+                  your data.
+                  <br />
+                  <br />
+                  Our goal is to create secure, high-performance tools that
+                  truly help. We adhere to industry standards and always
+                  prioritize people first in everything we do.
+                </p>
+              </div>
+              <br />
+
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Future Tools & Services
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  We are planning on building more tools and services in the
+                  future & this would mean that we have to retain some your
+                  codebase information or data on our servers.
+                  <br />
+                  <br />
+                  We will be transparent about it and give you the option to
+                  opt-out. Read more about our next & biggest project{" "}
+                  <span className="underline underline-offset-2 hover:cursor-pointer">
+                    <Link href="/blog/context-engine-of-the-future">Kite</Link>
+                  </span>
+                  .{" "}
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -234,18 +282,9 @@ export default function HomePage() {
             Ready to build the future?
           </h2>
           <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-            Join thousands of developers who trust our platform to deliver
-            exceptional web experiences at scale.
+            “I think it's much more interesting to live not knowing than to have
+            answers which might be wrong.” — Richard Feynman
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="rounded-md hard-shadow hard-shadow-hover"
-            >
-              Start Building Today
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-          </div>
         </div>
       </section>
       {/* Footer */}
