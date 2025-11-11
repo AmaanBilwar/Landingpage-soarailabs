@@ -27,8 +27,9 @@ export default async function Page(props: {
         </div>
         <div className="flex flex-col gap-4 text-sm">
           <div>
-            <p className="mb-1 text-fd-muted-foreground">Written by</p>
-            <p className="font-medium">{String(page.data.author)}</p>
+            <p className="font-medium">
+              Written by: {String(page.data.author)}
+            </p>
           </div>
           <div>
             <p className="mb-1 text-sm text-fd-muted-foreground">At</p>
