@@ -2,11 +2,11 @@ import React from "react";
 
 const TermsPage = () => {
   return (
-    <div className="min-h-screen gradient-bg relative -mt-20 md:-mt-24 pt-20 md:pt-24 px-6">
+    <div className="min-h-screen relative -mt-20 md:-mt-24 pt-20 md:pt-24 px-6">
       <main className="max-w-4xl mx-auto pb-16">
         <header className="mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Terms of Service 
+            Terms of Service
           </h1>
           <p className="text-sm text-muted-foreground">
             Revisions from Nov 18, 2025
@@ -21,27 +21,26 @@ const TermsPage = () => {
               See full edit history on GitHub
             </a>
           </p>
-          
         </header>
 
         <section className="space-y-4 mb-10">
           <h2 className="text-xl font-semibold text-foreground">Definitions</h2>
           <ul className="list-disc list-inside space-y-2 text-muted-foreground">
             <li>
-              <span className="font-semibold">Company:</span> “Soarailabs”, “Soar
-              AI Labs”, “we”, or “us” refers to Soarailabs and its maintainers,
-              currently operating the open source projects described on this
-              site.
+              <span className="font-semibold">Company:</span> “Soarailabs”,
+              “Soar AI Labs”, “we”, or “us” refers to Soar AI Labs and its
+              maintainers, currently operating the open source projects
+              described on this site.
             </li>
             <li>
               <span className="font-semibold">Maintainers:</span> Core
               contributors/developers authorized to make decisions, manage
-              releases, and operate Soarailabs projects (including Glide MCP and
-              related tools).
+              releases, and operate Soar AI Labs projects (including Glide MCP
+              and related tools).
             </li>
             <li>
-              <span className="font-semibold">Software/Services:</span>{" "}
-              Soarailabs tools and projects, including Glide MCP, merge conflict
+              <span className="font-semibold">Software/Services:</span> Soar AI
+              Labs tools and projects, including Glide MCP, merge conflict
               resolver, semantic commit splitter, context engines, any hosted
               APIs, and related websites, documentation, and integrations.
             </li>
@@ -79,7 +78,7 @@ const TermsPage = () => {
             Open Source Rights
           </h2>
           <p className="text-muted-foreground">
-            Soarailabs software, including Glide MCP and related tools, is
+            Soar AI Labs software, including Glide MCP and related tools, is
             released under the MIT License. You may use, copy, modify, merge,
             publish, distribute, sublicense, and/or sell copies of the software,
             subject to the MIT License terms.
@@ -138,8 +137,9 @@ const TermsPage = () => {
           <p className="text-muted-foreground">
             Many features of Glide and future context engine tools integrate
             with third‑party services (for example: LLM providers such as
-            Cerebras, embedding providers such as VoyageAI, graph databases such
-            as Helix, hosting providers, and Git platforms like GitHub).
+            Cerebras Systems Inc, embedding providers such as Voyage AI
+            Innovations, Inc., graph databases such as HelixDB, hosting
+            providers, and Git platforms like GitHub).
           </p>
           <p className="text-muted-foreground">
             You typically bring your own API keys and credentials for such
@@ -148,9 +148,9 @@ const TermsPage = () => {
           <p className="text-muted-foreground">
             Requests that involve code, diffs, file paths, or commit metadata
             may be sent from your environment to those third‑party services,
-            subject to their own terms and privacy policies. Soarailabs does not
-            control and is not responsible for how those third‑party providers
-            handle your data.
+            subject to their own terms and privacy policies. Soar AI Labs does
+            not control and is not responsible for how those third‑party
+            providers handle your data.
           </p>
           <p className="text-muted-foreground">
             When we offer managed hosted options (for example, a hosted context
@@ -171,9 +171,7 @@ const TermsPage = () => {
             warranties of merchantability, fitness for a particular purpose,
             title, and non‑infringement.
           </p>
-          <p className="text-muted-foreground">
-            We do not warrant that:
-          </p>
+          <p className="text-muted-foreground">We do not warrant that:</p>
           <ul className="list-disc list-inside space-y-2 text-muted-foreground">
             <li>
               The Software/Services will be error‑free, secure, or
@@ -235,14 +233,14 @@ const TermsPage = () => {
           </p>
           <p className="text-muted-foreground">
             By submitting feedback, suggestions, or feature ideas, you grant
-            Soarailabs a perpetual, irrevocable, worldwide, royalty‑free license
-            to use that input in any manner, including to improve the Software
-            and Services, without any obligation to compensate you.
+            Soar AI Labs a perpetual, irrevocable, worldwide, royalty‑free
+            license to use that input in any manner, including to improve the
+            Software and Services, without any obligation to compensate you.
           </p>
           <p className="text-muted-foreground">
             Any tips, sponsorships, or donations are voluntary, non‑refundable,
             and do not create any ownership interest, partnership, or obligation
-            for Soarailabs to implement specific features or respond to
+            for Soar AI Labs to implement specific features or respond to
             individual requests.
           </p>
         </section>
@@ -252,9 +250,9 @@ const TermsPage = () => {
             Self‑Hosted vs Managed Services
           </h2>
           <p className="text-muted-foreground">
-            You may self‑host Glide and other Soarailabs projects directly from
-            the open source repositories, or you may choose to use any managed
-            services we offer.
+            You may self‑host Glide and other Soar AI Labs projects directly
+            from the open source repositories, or you may choose to use any
+            managed services we offer.
           </p>
           <p className="text-muted-foreground">
             When self‑hosting, you are responsible for securing your
