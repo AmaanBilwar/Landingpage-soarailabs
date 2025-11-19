@@ -52,7 +52,7 @@ const products = [
           "Secure data handling",
         ],
         useCase: "Streamline your workflow with seamless tool integration",
-        status: "Coming this week!",
+        status: "Try it now!",
       },
     ],
   },
@@ -79,7 +79,6 @@ const products = [
 const ProductsPage = () => {
   return (
     <div className="min-h-screen w-full relative -mt-20 pt-20">
-
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 py-20 md:py-24 relative z-10">
         <div className="text-center max-w-3xl mx-auto">
@@ -180,19 +179,34 @@ const ProductsPage = () => {
       <section className="max-w-7xl mx-auto px-6 py-20 text-center relative z-10">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            Enter a new age of knowledge work
+            Enter a new age of development workflows
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            An AI-first workspace that enables fast, accurate research in
-            spreadsheets.
+            The first intelligent version control system made for modern teams
+            and individual developers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="min-w-[140px] hard-shadow">
-              Try it now
-            </Button>
-            <Button size="lg" variant="outline" className="min-w-[140px]">
-              Request a Demo
-            </Button>
+            <a
+              href="/docs/guides/installation"
+              target="_blank"
+              className="w-full sm:w-auto"
+            >
+              <Button size="lg" className="min-w-[140px] hard-shadow w-full">
+                Try it now
+              </Button>
+            </a>
+            <a
+              href="https://cal.com/emoamaan/onboarding"
+              className="w-full sm:w-auto"
+            >
+              <Button
+                size="lg"
+                variant="outline"
+                className="min-w-[140px] w-full"
+              >
+                Request a Demo
+              </Button>
+            </a>
           </div>
         </div>
       </section>
