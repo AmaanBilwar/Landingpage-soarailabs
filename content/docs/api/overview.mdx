@@ -5,7 +5,7 @@ description: Glide MCP Tools Documentation
 
 ## Available Tools
 
-Glide exposes the following tools via the Model Context Protocol (MCP).
+Glide exposes the following tools via the Model Context Protocol (MCP). We are mindful of the number of tools we expose to your coding IDE's LLMs. 
 
 ### `split_commit`
 
@@ -30,7 +30,7 @@ Detects merge conflicts in the repository, resolves them using AI, and applies t
 **Behavior:**
 
 1. Detects files with merge conflicts.
-2. Uses a local LLM (via Ollama) to resolve the conflict logic.
+2. Uses a local LLM (via Ollama) to resolve the conflict [This will change with our hosted inference service in the near future].
 3. Uses MorphLLM to apply the resolution to the file.
 4. Writes the changes immediately.
 5. Returns a preview of the resolution.
