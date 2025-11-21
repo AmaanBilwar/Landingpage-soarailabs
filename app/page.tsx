@@ -55,7 +55,7 @@ export default function HomePage() {
               className="rounded-md px-12 py-6 text-lg hover:cursor-pointer hard-shadow hard-shadow-hover"
             >
               <Link
-                href="https://github.com/SoarAILabs/glide/tree/feat/resolve-conflict"
+                href="https://github.com/SoarAILabs/glide"
                 target="_blank"
                 className="hover:cursor-pointer text-white"
               >
